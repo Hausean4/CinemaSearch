@@ -32,9 +32,12 @@ import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue
 import { search } from 'ionicons/icons';
 import axios from 'axios'
   import { ref } from 'vue';
+
   const listItems = ref([]);
-    const res = await fetch("http://localhost:8080/api/movies/");
+
+  async function getData() {
+    const res = await fetch("localhost:8080/api/movies/");
     const finalRes = await res.json();
     listItems.value = finalRes;
-  
+  }
 </script>
