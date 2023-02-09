@@ -21,6 +21,22 @@ public class Times {
     @ManyToOne
     private Movie movie;
 
+    public Cinema getCinema() {
+        return cinema;
+    }
+
+    public void setCinema(Cinema cinema) {
+        this.cinema = cinema;
+    }
+
+    public Movie getMovie() {
+        return movie;
+    }
+
+    public void setMovie(Movie movie) {
+        this.movie = movie;
+    }
+
     public Long getShowtimeId() {
         return showtimeId;
     }
