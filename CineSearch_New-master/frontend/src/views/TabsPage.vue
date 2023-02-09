@@ -8,19 +8,9 @@
           <ion-label>Home</ion-label>
         </ion-tab-button>
           
-        <ion-tab-button tab="LoginPage" href="/tabs/LoginPage">
-          <ion-icon :icon="logIn" />
-          <ion-label>Login</ion-label>
-        </ion-tab-button>
-        
         <ion-tab-button tab="MovieSearch" href="/tabs/MovieSearch">
           <ion-icon :icon="search" />
           <ion-label>Suche</ion-label>
-        </ion-tab-button>
-
-        <ion-tab-button tab="RegisterPage" href="/tabs/RegisterPage">
-          <ion-icon :icon="personAddOutline" />
-          <ion-label>Registrieren</ion-label>
         </ion-tab-button>
 
         <ion-tab-button tab="SupportPage" href="/tabs/SupportPage">
