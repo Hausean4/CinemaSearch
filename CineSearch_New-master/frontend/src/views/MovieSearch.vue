@@ -20,27 +20,37 @@
           </ion-col>
         </ion-row>
       </ion-grid>
-      <div v-for="item in listItems" :key="item.showtime_ID">
-        {{item.showtime_ID}}
+        <ion-col size = 100px>Titel</ion-col>
+        <ion-col size = 100px>Kino Name</ion-col>
+        <ion-col size = 100px>Kino Adresse</ion-col>
+        <ion-col size = 100px>Vorstellungsdatum</ion-col>
+        <ion-col size = 100px>Vorstellungsbeginn</ion-col>
+        <ion-col size = 100px>Telefonnummer</ion-col>
+      <div v-for="item in listItems" :key="item">
+        <ion-row size = 100px>{{ item.movie.movieName }}
+          {{ item.cinema.cinemaName }}
+          {{ item.showtimeId }}
+          {{ item.cinema.cinemaAddress }}
+          {{ item.showtimesDate }}
+          {{ item.showtimesTime}}</ion-row>
+         {{ item.cinema.cinemaPhone }}
       </div>
     </ion-content>
   </ion-page>
 </template>
 
 <script setup lang ="ts">
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonInput, IonButton, IonRow, IonGrid } from '@ionic/vue';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonInput, IonButton, IonRow, IonGrid, IonItem, IonCol, IonCard } from '@ionic/vue';
+import axios from 'axios';
   import { ref } from 'vue';
 
   const listItems = ref();
   const search = ref();
 
-  async function getData() {
-<<<<<<< HEAD
-    const res = await fetch("http://localhost:8080/api/movies/"+search.value);
-=======
-    const res = await fetch("http://localhost:8080/api/movies/?");
->>>>>>> ef7a009eff7bb6fb5cb1fd4f603955cbb8568ccf
-    const finalRes = await res.json();
-    listItems.value = finalRes;
+  function getData() {
+    const res = axios.get('http://localhost:8080/api/movies/'+search.value).then(response => {
+      console.log(response);
+      listItems.value = response.data;
+    })
   }
 </script>
