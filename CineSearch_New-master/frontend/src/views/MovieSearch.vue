@@ -35,7 +35,11 @@ import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonInput, IonButt
   const search = ref();
 
   async function getData() {
+<<<<<<< HEAD
     const res = await fetch("http://localhost:8080/api/movies/"+search.value);
+=======
+    const res = await fetch("http://localhost:8080/api/movies/?");
+>>>>>>> ef7a009eff7bb6fb5cb1fd4f603955cbb8568ccf
     const finalRes = await res.json();
     listItems.value = finalRes;
   }
