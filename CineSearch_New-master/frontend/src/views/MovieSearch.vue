@@ -20,23 +20,22 @@
           </ion-col>
         </ion-row>
       </ion-grid>
-      <div v-for="item in listItems" :key="item.name">
-        {{item.name}}
+      <div v-for="item in listItems" :key="item.showtime_ID">
+        {{item.showtime_ID}}
       </div>
     </ion-content>
   </ion-page>
 </template>
 
 <script setup lang ="ts">
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
-import { search } from 'ionicons/icons';
-import axios from 'axios'
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonInput, IonButton, IonRow, IonGrid } from '@ionic/vue';
   import { ref } from 'vue';
 
-  const listItems = ref([]);
+  const listItems = ref();
+  const search = ref();
 
   async function getData() {
-    const res = await fetch("http://localhost:8080/api/movies/?'name'");
+    const res = await fetch("http://localhost:8080/api/movies/"+search.value);
     const finalRes = await res.json();
     listItems.value = finalRes;
   }
