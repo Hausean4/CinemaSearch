@@ -36,7 +36,7 @@ import axios from 'axios'
   const listItems = ref([]);
 
   async function getData() {
-    const res = await fetch("http://localhost:8080/api/movies/?'name'");
+    const res = await fetch("http://localhost:8080/api/movies/?");
     const finalRes = await res.json();
     listItems.value = finalRes;
   }
