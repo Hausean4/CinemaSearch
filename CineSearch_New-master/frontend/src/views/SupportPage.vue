@@ -20,7 +20,7 @@
                 <input type="email" name="user_email" /> <br>
                 <label><p>Message</p></label>
                 <textarea name="message"></textarea> <br>
-                <ion-button class="sendButton" size="medium" @click="send" expand="block">Send</ion-button>
+                <ion-button class="sendButton" size="medium" @click="sendEmail" expand="block">Send</ion-button>
               </form>
             </div>
           </ion-col>
@@ -40,7 +40,7 @@ import {
 } from "@ionic/vue";
 import {ref, onMounted } from 'vue'
 import emailjs from "@emailjs/browser";
-import { send } from "ionicons/icons";
+
 
 const form = ref<any>(null);
 
@@ -54,6 +54,7 @@ function sendEmail() {
     .then(
       (result) => {
         console.log("SUCCESS!", result.text);
+        location.reload()
       },
       (error) => {
         console.log("FAILED...", error.text);

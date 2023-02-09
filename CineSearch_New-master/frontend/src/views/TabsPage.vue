@@ -13,7 +13,6 @@
           <ion-label>Suche</ion-label>
         </ion-tab-button>
 
-
         <ion-tab-button tab="SupportPage" href="/tabs/SupportPage">
           <ion-icon :icon="helpCircleOutline" />
           <ion-label>Support</ion-label>
