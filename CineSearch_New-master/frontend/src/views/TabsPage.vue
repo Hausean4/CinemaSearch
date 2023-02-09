@@ -7,11 +7,12 @@
           <ion-icon :icon="home" />
           <ion-label>Home</ion-label>
         </ion-tab-button>
-          
+        
         <ion-tab-button tab="MovieSearch" href="/tabs/MovieSearch">
           <ion-icon :icon="search" />
           <ion-label>Suche</ion-label>
         </ion-tab-button>
+
 
         <ion-tab-button tab="SupportPage" href="/tabs/SupportPage">
           <ion-icon :icon="helpCircleOutline" />
