@@ -53,5 +53,17 @@ h3{
   td{
     text-align: center;
   }
+  template{
+    text-align: center;
+  }
+  ion-page{
+    text-align: center;
+  }
+  ion-content{
+    text-align: center;
+  }
+  ion-grid{
+    text-align: center;
+  }
 
 
