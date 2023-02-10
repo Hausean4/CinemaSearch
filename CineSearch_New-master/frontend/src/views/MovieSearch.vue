@@ -20,20 +20,42 @@
           </ion-col>
         </ion-row>
       </ion-grid>
-        <ion-col size = 100px>Titel</ion-col>
-        <ion-col size = 100px>Kino Name</ion-col>
-        <ion-col size = 100px>Kino Adresse</ion-col>
-        <ion-col size = 100px>Vorstellungsdatum</ion-col>
-        <ion-col size = 100px>Vorstellungsbeginn</ion-col>
-        <ion-col size = 100px>Telefonnummer</ion-col>
-      <div v-for="item in listItems" :key="item">
-        <ion-row size = 100px>{{ item.movie.movieName }}
+<!--         <ion-col size = 100px>Titel</ion-col>
+        <ion-col size = 100px>Kino</ion-col>
+        <ion-col size = 100px>Location</ion-col>
+        <ion-col size = 100px>Datum</ion-col>
+        <ion-col size = 100px>Uhrzeit</ion-col> -->
+<!--         <ion-col size = 100px>Telefonnummer</ion-col> -->
+<!--       <div v-for="item in listItems" :key="item">
+        <ion-row size = 100px>
+          {{ item.movie.movieName }}
           {{ item.cinema.cinemaName }}
           {{ item.showtimeId }}
           {{ item.cinema.cinemaAddress }}
           {{ item.showtimesDate }}
-          {{ item.showtimesTime}}</ion-row>
+          {{ item.showtimesTime}}
+        </ion-row>
          {{ item.cinema.cinemaPhone }}
+      </div> -->
+      <table style="width:100%">
+          <tr>
+            <th>Titel</th>
+            <th>Kino</th>
+            <th>Location</th>
+            <th>Datum</th>
+            <th>Uhrzeit</th>
+          </tr>
+      </table>
+      <div v-for="item in listItems" :key="item">
+        <table style="width:100%">
+          <tr>
+            <td>{{ item.movie.movieName }}</td>
+            <td>{{ item.cinema.cinemaName }}</td>
+            <td>{{ item.cinema.cinemaAddress }}</td>
+            <td>{{ item.showtimesDate }}</td>
+            <td>{{ item.showtimesTime}}</td>
+          </tr>
+        </table>
       </div>
     </ion-content>
   </ion-page>
