@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-CineSearch<CineSearch>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "ch.zhaw.CineSearch.CineSearch",
+            "projectName": "CineSearch",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

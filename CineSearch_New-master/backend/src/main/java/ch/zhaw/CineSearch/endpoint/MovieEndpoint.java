@@ -1,4 +1,4 @@
-package ch.zhaw.CineSearch.boundary;
+package ch.zhaw.CineSearch.endpoint;
 
 import java.util.List;
 import java.util.Optional;
