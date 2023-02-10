@@ -45,18 +45,14 @@
             <th>Datum</th>
             <th>Uhrzeit</th>
           </tr>
-      </table>
-      <div v-for="item in listItems" :key="item">
-        <table style="width:100%">
-          <tr>
-            <td>{{ item.movie.movieName }}</td>
-            <td>{{ item.cinema.cinemaName }}</td>
-            <td>{{ item.cinema.cinemaAddress }}</td>
-            <td>{{ item.showtimesDate }}</td>
-            <td>{{ item.showtimesTime}}</td>
+          <tr v-for="item in listItems" :key="item">
+            <td>{{item.movie.movieName}}</td>
+            <td>{{item.cinema.cinemaName}}</td>
+            <td>{{item.cinema.cinemaAddress}}</td>
+            <td>{{item.showtimesDate}}</td>
+            <td>{{item.showtimesTime}}</td>
           </tr>
         </table>
-      </div>
     </ion-content>
   </ion-page>
 </template>
